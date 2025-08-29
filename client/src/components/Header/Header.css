@@ -1,0 +1,99 @@
+.headerSection { 
+    width: 100%;
+    height: clamp(2.25rem, 10vh, 4rem); 
+    z-index: 999;
+    background-image: linear-gradient(#9f44d3, #c695e2); 
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-between; 
+} 
+
+.headerBtnBox {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center; 
+} 
+
+.headerBtn {
+    margin: 1rem; 
+
+    color: white; 
+    font-size: clamp(1.25rem, 2vw, 1.5rem); 
+} 
+
+.headerBtn:hover {
+    color: #7e2fac; 
+
+    cursor: pointer; 
+}
+
+/* CSS Elements intented for the hamburger button ------------------------------------------------------------------------*/
+
+.headerHamburgerBtn { 
+    display: none;
+
+    margin: 1rem; 
+
+    transition: transform 0.2s ease-in-out;
+}  
+
+.headerHamburgerBtn:hover { 
+    cursor: pointer;
+
+    transform: scale(1.1);
+} 
+
+.bar1, .bar2, .bar3 { 
+    width: 35px; 
+    height: 5px; 
+    margin: 6px 0;
+
+    background-color: white;  
+
+    transition: 0.4s;
+} 
+
+.headerHamburgerBtn:hover .bar1, .headerHamburgerBtn:hover .bar2, .headerHamburgerBtn:hover .bar3 {
+    background-color: #7e2fac;
+}
+
+.toggleBurger .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+} 
+
+.toggleBurger .bar2 {
+    opacity: 0;
+} 
+
+.toggleBurger .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+@media (max-width: 768px) { 
+    .headerHamburgerBtn {
+        display: block;
+    }
+
+    .headerBtnBox { 
+        position: fixed;
+        top: -100%; 
+        width: 100vw;
+
+        background-color: #121212;
+        flex-direction: column;
+
+        text-align: center;
+        transition: 0.5s;
+    }  
+
+    .headerBtnBox.active { 
+        top: clamp(2.25rem, 10vh, 4rem); 
+    }
+}

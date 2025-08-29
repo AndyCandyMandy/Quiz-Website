@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"; 
+
 function LandingPage() { 
     return (
         <div> 
@@ -10,7 +12,7 @@ function LandingPage() {
                 </div> 
 
                 <div className="landingAccountBox"> 
-                    <button className="landingBtn">Login</button> 
+                    <Link className="landingBtn" to="/Home">Login</Link> 
                     <button className="landingBtn">Sign Up</button>
                 </div>
             </section>

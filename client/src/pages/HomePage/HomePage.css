@@ -1,0 +1,35 @@
+.homeSection {
+    margin: 0 5rem 0; 
+} 
+
+.trendingSection {
+    display: grid; 
+    grid-template:
+    'topContent topContent . . '
+    'topContent topContent . . ';
+} 
+
+.trendiestContent {
+    grid-area: topContent;
+    width: 100%;
+}
+
+.trendingContent {
+    border-style: solid;
+    border-color: red; 
+}  
+
+@media (max-width: 768px) {  
+    .homeSection {
+        margin: 0 2.5rem 0; 
+    }  
+
+    .trendingSection {
+    display: grid; 
+    grid-template: 
+    'topContent topContent' 
+    'topContent topContent'
+    ' . . '
+    ' . . ';
+} 
+}
