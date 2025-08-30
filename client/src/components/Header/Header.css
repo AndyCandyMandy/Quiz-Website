@@ -2,7 +2,7 @@
     width: 100%;
     height: clamp(2.25rem, 10vh, 4rem); 
     z-index: 999;
-    background-image: linear-gradient(#9f44d3, #c695e2); 
+    background-image: linear-gradient(#9f44d3, #9f44d3, #c695e2); 
     color: white;
 
     position: sticky;

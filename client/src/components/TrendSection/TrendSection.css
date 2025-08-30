@@ -1,0 +1,36 @@
+.trendingSection {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
+    gap: 1rem;
+} 
+
+.trendingSection.defaultTrend {
+    grid-template-columns: repeat(4, 1fr);
+} 
+
+.trendingSection.defaultTrend div:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+} 
+
+.trendingContent {
+    border-style: solid;
+    border-color: red; 
+
+    min-height: 15rem;
+}   
+
+@media (max-width: 768px) {  
+    .trendingSection {
+        grid-template-columns: 1fr; 
+    }  
+
+    .trendingSection.defaultTrend {
+        grid-template-columns: 1fr;
+    } 
+
+    .trendingSection.defaultTrend div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    } 
+}

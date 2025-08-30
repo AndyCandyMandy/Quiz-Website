@@ -1,9 +1,11 @@
 
 import Header from "../../components/Header/Header.js"; 
+import Trends from "../../components/TrendSection/TrendSection.js"; 
 
 import "./HomePage.css"; 
 
 function HomePage() { 
+
     return (
         <div> 
             <Header></Header>
@@ -11,23 +13,7 @@ function HomePage() {
             <section className="homeSection" id="trendingId">
                 <p>Trending</p> 
 
-                <div className="trendingSection">
-                    <div className="trendingContent trendiestContent"> 
-                        <p>Element 1</p>
-                    </div> 
-                    <div className="trendingContent"> 
-                        <p>Element 2</p>
-                    </div> 
-                    <div className="trendingContent"> 
-                        <p>Element 3</p>
-                    </div> 
-                    <div className="trendingContent"> 
-                        <p>Element 4</p>
-                    </div> 
-                    <div className="trendingContent"> 
-                        <p>Element 5</p>
-                    </div>
-                </div>
+                <Trends></Trends>
             </section> 
 
             <section className="homeSection" id="recentId">
