@@ -54,7 +54,7 @@ function Header() {
             <div className={`headerBtnBox ${isHeaderContentOpen ? "active" : ""}`}>
                 <p className="headerBtn" onClick={() => {scrollSectionBtn("trendingId"); turnOffHamburger()}}>Trending</p> 
                 <p className="headerBtn" onClick={() => {scrollSectionBtn("recentId"); turnOffHamburger()}}>Recent</p>
-                <p className="headerBtn" onClick={() => {scrollSectionBtn("displayId"); turnOffHamburger()}}>Favourited</p> 
+                <p className="headerBtn" onClick={() => {scrollSectionBtn("displayId"); turnOffHamburger()}}>Catalogue</p> 
                 <p className="headerBtn">Create Quiz</p>
                 <p className="headerBtn">My Profile</p>
             </div> 

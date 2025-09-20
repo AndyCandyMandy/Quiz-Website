@@ -1,6 +1,8 @@
 
 import Header from "../../components/Header/Header.js"; 
 import Trends from "../../components/TrendSection/TrendSection.js"; 
+import Recent from "../../components/RecentSection/RecentSection.js"; 
+import Display from "../../components/DisplaySection/DisplaySection.js"; 
 
 import "./HomePage.css"; 
 
@@ -17,11 +19,15 @@ function HomePage() {
             </section> 
 
             <section className="homeSection" id="recentId">
-                <p>Recently Viewed</p>
+                <p>Recently Viewed</p> 
+
+                <Recent></Recent>
             </section> 
 
             <section className="homeSection" id="displayId">
-                <p>Display</p>
+                <p>Display</p> 
+
+                <Display></Display>
             </section> 
 
             <footer className="landingFooter">

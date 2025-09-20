@@ -1,0 +1,16 @@
+.displaySection {
+    display: grid;  
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1rem;
+} 
+
+.displayContent {
+    border-style: solid;
+    border-color: red; 
+
+    min-height: 15rem;
+} 
+
+.displayContent:hover {
+    border-color: blue; 
+}

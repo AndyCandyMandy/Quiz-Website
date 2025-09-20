@@ -1,12 +1,12 @@
 import { useQuizPage } from "../../hooks/useQuizPage.js";
 
-import "./TrendSection.css"; 
+import "./DisplaySection.css"; 
 
-function TrendSection() { 
+function DisplaySection() { 
 
     const toQuizPage = useQuizPage();
 
-    const trendingContent = [
+    const displayContent = [
         "Element 1",
         "Element 2",
         "Element 3",
@@ -15,16 +15,18 @@ function TrendSection() {
     ];
 
     return (
-        <>
-            <div className={`trendingSection ${trendingContent.length > 4 ? "defaultTrend" : ""}`}>
-                {trendingContent.map((text, i) => (
+        <> 
+
+            <div className="displaySection">
+                {displayContent.map((text, i) => (
                     <div className="trendingContent" onClick={() => {toQuizPage()}} key={i}>
                         <p>{text}</p>
                     </div>
                 ))}
             </div>
+            
         </> 
     );
 } 
 
-export default TrendSection;
+export default DisplaySection;

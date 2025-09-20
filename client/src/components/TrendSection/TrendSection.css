@@ -20,6 +20,10 @@
     min-height: 15rem;
 }   
 
+.trendingContent:hover {
+    border-color: blue; 
+}
+
 @media (max-width: 768px) {  
     .trendingSection {
         grid-template-columns: 1fr; 

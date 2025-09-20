@@ -1,0 +1,18 @@
+.recentSection { 
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;
+} 
+
+.recentContent {
+    border-style: solid;
+    border-color: red; 
+
+    min-width: 25rem;
+    min-height: 15rem;
+} 
+
+.recentContent:hover {
+    border-color: blue;
+}

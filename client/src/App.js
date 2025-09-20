@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 
 import Landing from "./pages/LandingPage"; 
-import Home from "./pages/HomePage/HomePage";
+import Home from "./pages/HomePage/HomePage"; 
+import Quiz from "./pages/QuizPage/QuizPage";
+
 
 function App() {
   return ( 
@@ -14,6 +16,7 @@ function App() {
       <Routes> 
         <Route exact path="/" element={<Landing />} /> 
         <Route exact path="/Home" element={<Home />} /> 
+        <Route exact path="/Home/Quiz" element={<Quiz />} /> 
       </Routes>
     </Router>
   );
