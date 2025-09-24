@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"; 
-import { scrollSectionBtn } from "../../utils/scrollTo.js";
+import { useLocation } from "react-router-dom"; 
+
+import { scrollTopBtn, scrollSectionBtn } from "../../utils/scrollTo.js";
 
 import "./Header.css"; 
 
 function Header() { 
     const [isHeaderContentOpen, setIsHeaderContentOpen] = useState(false); 
+    const location = useLocation();
     
       useEffect(() => {  
           // Function closes the hamburger menu when the header is no longer attached/sticky
@@ -49,15 +52,25 @@ function Header() {
 
     return (
         <header className="headerSection" id="headerId">
-            <h2>Quiz Website</h2> 
+            <h2 className="headerTitle">Quiz Website</h2> 
 
-            <div className={`headerBtnBox ${isHeaderContentOpen ? "active" : ""}`}>
-                <p className="headerBtn" onClick={() => {scrollSectionBtn("trendingId"); turnOffHamburger()}}>Trending</p> 
-                <p className="headerBtn" onClick={() => {scrollSectionBtn("recentId"); turnOffHamburger()}}>Recent</p>
-                <p className="headerBtn" onClick={() => {scrollSectionBtn("displayId"); turnOffHamburger()}}>Catalogue</p> 
-                <p className="headerBtn">Create Quiz</p>
-                <p className="headerBtn">My Profile</p>
-            </div> 
+            {location.pathname === "/Home" && 
+                <div className={`headerBtnBox ${isHeaderContentOpen ? "active" : ""}`}>
+                    <p className="headerBtn" onClick={() => {scrollTopBtn(); turnOffHamburger()}}>Trending</p> 
+                    <p className="headerBtn" onClick={() => {scrollSectionBtn("recentId"); turnOffHamburger()}}>Recent</p>
+                    <p className="headerBtn" onClick={() => {scrollSectionBtn("displayId"); turnOffHamburger()}}>Catalogue</p> 
+                    <p className="headerBtn">Create Quiz</p>
+                    <p className="headerBtn">My Profile</p>
+                </div> 
+            }
+
+            {location.pathname === "/Home/Quiz" && 
+                <div className={`headerBtnBox ${isHeaderContentOpen ? "active" : ""}`}>
+                    <p className="headerBtn" onClick={() => {scrollSectionBtn("displayId"); turnOffHamburger()}}>Catalogue</p> 
+                    <p className="headerBtn">My Profile</p>
+                </div> 
+            }
+            
 
             <div className={`headerHamburgerBtn ${isHeaderContentOpen ? "toggleBurger" : ""}`} onClick={toggleHamburger}> 
                 <div className="bar1"></div> 

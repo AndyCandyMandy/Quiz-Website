@@ -18,8 +18,17 @@ function TrendSection() {
         <>
             <div className={`trendingSection ${trendingContent.length > 4 ? "defaultTrend" : ""}`}>
                 {trendingContent.map((text, i) => (
-                    <div className="trendingContent" onClick={() => {toQuizPage()}} key={i}>
-                        <p>{text}</p>
+                    <div className="trendingContent" onClick={() => {toQuizPage()}} key={i}> 
+                        <div className="trendingTitleBox">
+                            <p>{text}</p>
+                            <p>By Someone</p>
+                            <div className="trendingTitleContent">
+                                <button className="trendingBtn">Like</button> 
+                                <button className="trendingBtn">Dislike</button> 
+                                <button className="trendingBtn">Favourite</button>
+                            </div>
+                        </div>
+                        
                     </div>
                 ))}
             </div>
